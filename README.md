@@ -14,19 +14,14 @@ First, one needs to really look at the name "compose". In the world of container
 
 ## About Container Orchestration
 
-Managing containers can often prove to be difficult in the context of scalability, distributed environments and having a lot of infrastructure. Docker compose provides the first building block of managing multiple containers.
+Managing containers can often prove to be difficult in the context of scalability, distributed environments and having a lot of infrastructure. Docker compose provides the first building block of managing multiple containers. Some of its features include:
 
-- An easy way to scale applications across computing resources 
-- Offerring fault tolerance & reliablity 
-- Load Balancing requests 
-- Rolling Updates that allows the service to be up despite updates through replicas 
-- Easy to Learn 
-- Built natively into docker engine
+- Orchestrate multiple containers in a single machine in isolated environments
+- Preserve state with docker 
+- Only recreate containers when they have changed 
+- Support for environment variables 
+- Ability to automatically restart containers 
 
-
-The larger goal of swarm and container orchestration is to make it easy for scalable applications to be built by using smarter technologies that manage and reduce overhead as developers to manage application infrastructure while mainting scalability and high throughput. 
-
-This tutorial does not expect you to have access to multiple computing resources hence it demonstrates use of swarm with one manager node that also acts as worker node in hope to show the concepts behind swarm. 
 
 ## Features of Docker Compose
 
@@ -34,9 +29,9 @@ This tutorial does not expect you to have access to multiple computing resources
 
 For this tutorial to work, you will need to have docker version 19.0 or above installed through docker for linux or desktop for mac or docker desktop for windows. Downloads to these can be found [here](https://docs.docker.com/get-docker/).
 
-In terms of knowledge, this tutorial assumes basic knowledge of docker, containers and docker-compose. 
+In terms of knowledge, this tutorial assumes basic knowledge of docker and containers. 
 
-## Basic Concepts 
+## Components of a Docker Compose file 
 
 This section contains some of the key concepts part of docker swarm. 
 
