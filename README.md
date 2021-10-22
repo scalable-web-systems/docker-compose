@@ -142,90 +142,23 @@ docker-compose down
 Sample Output:
 ![](img/output_4.png)
 
-### 
 
-```
-docker service ls 
-```
-
-Sample Output:
-![](img/output_3.png)
-
-### Scaling service
-
-```
-docker service scale {service name}={number of replicas}
-```
-
-Sample Output:
-![](img/output_4.png)
-
-### Viewing state of worker nodes 
-
-```
-docker service ps {service name}
-```
-
-Sample Output:
-![](img/output_5.png)
-
-### Remove a service 
-
-```
-docker service rm {service name}
-```
-
-### Quit Swarm Mode 
-
-```
-docker swarm leave
-```
-
-If the above doesn't work due to the current machining being a manager node. Use the following commmand:
-
-```
-docker swarm leave --force
-```
-
-## Docker Swarm Commands Cheatsheet 
+## Docker Compose Commands Cheatsheet 
 
 ```
 #Start all services
 docker compose up 
 
-#Check the current state of the swarm with container information
+#Specify upto multiple compose files at once
 docker compose -f {file name with path} {Another compose file, this is optional}
 
 #View running containers
 docker ps
 
-#Create a service with the CLI
-docker service create --replicas {number of replicas} --name {service name} {image name} 
 
-#Create a service with docker-compose file
-docker stack deploy -c {docker-compose file name} {docker compose app name} 
-
-#Scaling a service
-docker service scale {service name}={number of replicas}
-
-#Check for running services 
-docker service ls
-
-#View state of worker nodes
-docker service ps {service name}
-
-#Remove a service
-docker service rm {service name}
-
-#Leave Swarm 
-docker swarm leave 
-
-#Leave swarm forcefully 
-docker swarm leave --force
 ```
 
 ## Acknowledgements 
 
-- [Docker Swarm Guide](https://gabrieltanner.org/blog/docker-swarm)
-- [Official Docker Swarm Tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/)
+- [Official Docker Compose Tutorial](https://docs.docker.com/samples/django/)
 
