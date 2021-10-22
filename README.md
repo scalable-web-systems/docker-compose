@@ -23,8 +23,6 @@ Managing containers can often prove to be difficult in the context of scalabilit
 - Ability to automatically restart containers 
 
 
-## Features of Docker Compose
-
 ## Prerequisites & Getting Started
 
 For this tutorial to work, you will need to have docker version 19.0 or above installed through docker for linux or desktop for mac or docker desktop for windows. Downloads to these can be found [here](https://docs.docker.com/get-docker/).
@@ -58,7 +56,10 @@ services:
 
 ### Version 
 
+The version of the file
 ### Services
+
+Under the services 
 
 ### Images/Build 
 
