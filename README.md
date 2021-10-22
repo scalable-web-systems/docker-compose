@@ -52,6 +52,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    restart: always
 ```
 
 ### Version 
@@ -81,6 +82,10 @@ The ports argument is used to expose the container to the host so it can be acce
 ### Depends on/links
 
 Depends on as the name suggests tells docker compose that a service depends on the availability of another. In the example, the web service depends on the database. This tells docker compose to create a network bridge between the two containers to interface. In the web application, one can simply refer to "db" to refer to teh database and it will simply work due to the network bridge. Depends on can also be written as "links" which is the same thing but different docker compose version. 
+
+### Restart
+
+The restart policy defines the restart rules. In the example, it is defined as always which means if the container goes down, docker compose will always try to get it back up. Other parameters may include "unless stopped". It can be taken to the next level where timeouts can be defined and heatlh checks can be defined. 
 
 ## Tutorial - Running Docker Compose Locally 
 
