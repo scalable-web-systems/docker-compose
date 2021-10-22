@@ -155,10 +155,28 @@ docker compose -f {file name with path} {Another compose file, this is optional}
 #View running containers
 docker ps
 
+# Run docker compose in detached mode
+docker-compose up -d
 
+# Get into docker container shell 
+docker exec -it {container name/id} bash
+
+# Run a command within a container 
+docker exec -it {container name/id} {command name}
+
+# See logs of a service
+docker-compose logs {service name}
+
+# Attach environment variables during run time 
+docker exec -it {container name/id} {variable name=value}
 ```
 
 ## Acknowledgements 
 
+- [Awesome docker compose templates](https://github.com/docker/awesome-compose)
 - [Official Docker Compose Tutorial](https://docs.docker.com/samples/django/)
+
+## See something to improve on this tutorial?
+
+If you see a bug, or gramatical errors or something to add, please do submit a pull request!
 
