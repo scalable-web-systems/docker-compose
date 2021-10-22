@@ -33,50 +33,43 @@ In terms of knowledge, this tutorial assumes basic knowledge of docker and conta
 
 ## Components of a Docker Compose file 
 
-This section contains some of the key concepts part of docker swarm. 
+This section introduces various parts of a docker compose file. Let us take a look a sample docker compose file:
 
-### A Node
+```
+version: "3.9"
+   
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+```
 
-A node is used to indicate a physical computing resource in the context of docker swarm. A node often defines a single virtual machine running docker engine. 
+### Version 
 
-### Manager Nodes
+### Services
 
-Manager nodes distribute and schedule incoming tasks onto the Worker nodes, maintain the cluster state and perform orchestration and cluster management functions. Manager Nodes can also optionally run services for Worker nodes.
+### Images/Build 
 
-Cluster management tasks include:
-- Maintaining the cluster state
-- Scheduling services
-- Serving swarm mode to HTTP API endpoints
+### Environment Variables 
 
-There should always be multiple manager nodes in your swarm because of the following reasons:
+### Volumes
 
-- Maintaining high availability
-- Easily recover from a manager node failure without downtime
-
-That is why Docker recommends you implement an odd number of nodes according to your projects availability requirements.
-
-### Worker Nodes 
-
-Worker nodes are also instances of the Docker Engine whose sole purpose is to execute containers and services as instructed by the Manager Nodes.
-
-### A service
-
-A service is the definition of the tasks to execute on the nodes. It is the primary root of user interaction with the swarm.
-
-When you create a service, you specify which container image to use and which commands to execute inside running containers. You also define other options for the service including:
-- the port you want to expose
-- CPU and memory limitations
-- the number of replicas of the image to run in the swarm
-- a rolling update policy
-
-These parameters can also be defined through a docker-compose yaml file and deployed into the swarm. 
-
-The following is an image of a service which is nginx (a web server) having 3 replicas being deployed on 3 nodes. 
-
-![](https://docs.docker.com/engine/swarm/images/services-diagram.png)
+### Ports 
 
 
-## Tutorial - Running Swarm Locally
+## Tutorial - Running Docker Compose Locally 
 
 ### Initializing docker swarm 
 
@@ -191,8 +184,8 @@ docker swarm leave --force
 ## Docker Swarm Commands Cheatsheet 
 
 ```
-#Initilizes swarm environment 
-docker swarm init 
+#Start all services
+docker compose up 
 
 #Check the current state of the swarm with container information
 docker info 
