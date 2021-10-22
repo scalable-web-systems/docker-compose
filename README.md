@@ -56,7 +56,8 @@ services:
 
 ### Version 
 
-The version of the file
+The version of the docker compose file. Like any software and software system, compose files also have versions of updates docker made 
+
 ### Services
 
 Under the services 
