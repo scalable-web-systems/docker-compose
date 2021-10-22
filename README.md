@@ -4,7 +4,9 @@
 
 ## Introduction 
 
-This tutorial is about docker swarm as the name suggests. The scope of this tutorial is talk about the motivation behind docker swarm, how it works in brief and provide a quick guide to jump start on your local machine to see how it works.
+This tutorial is about docker compose as the name suggests. The scope of this tutorial is talk about the motivation behind docker compose, how it works in brief and provide a quick guide to jump start on your local machine to see how it works.
+
+First, one needs to really look at the name "compose". In the world of container orchestration, compose, like a composer in music is all about composing, creating and architecting your containers. With the need of multiple containers, docker compose becomes a critical tool as well as powerful one while being simple to use. 
 
 ### Notes 
 
