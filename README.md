@@ -26,6 +26,7 @@ The larger goal of swarm and container orchestration is to make it easy for scal
 
 This tutorial does not expect you to have access to multiple computing resources hence it demonstrates use of swarm with one manager node that also acts as worker node in hope to show the concepts behind swarm. 
 
+## Features of Docker Compose
 
 ## Prerequisites & Getting Started
 
