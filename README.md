@@ -95,7 +95,7 @@ cd docker-compose
 
 To start the containers, run:
 ```
-docker compose up 
+docker-compose up 
 ```
 
 Sample Output:
@@ -119,52 +119,25 @@ docker ps
 Sample Output:
 ![](img/output_2.png)
 
-### Create a service 
+### Shutting down services and cleaning up 
+
+There are two approaches to this. Just stopping the containers run:
 
 ```
-docker service create --replicas {number of replicas} --name {service name} {image name}
+command/control + C
 ```
+Sample Output:
+![](img/output_3.png)
 
-Example: 
-
-```
-docker service create --replicas 1 --name helloworld nginx
-```
-
-We can also use a docker-compose file to define this: 
-
-Sample Yaml:
-```
-version: "3"
-services:
-  dataservice:
-    image: nginx:latest
-    deploy:
-      replicas: 3
-    ports:
-      - "3000:80"
-```
-
-The above yaml file defines a service: dataservice with 3 replicas and uses the latest nginx image while exposing the port 80 container to port 3000 of the host. 
-
-To run such an example application you can clone this repo, make a swarm from the prevous commands and create a service through the following commands:
+To stop the containers, remove the containers and any network bridges, run:
 
 ```
-git clone https://github.com/abhinavtripathy/docker-swarm.git
-docker stack deploy -c sample.yml app
+docker-compose down
 ```
+Sample Output:
+![](img/output_4.png)
 
-Go to [localhost:3000](localhost:3000) to view the welcome page for nginx after running those commands. 
-
-In general the format to create a service in swarm from a docker-compose yaml file is:
-
-```
-docker stack deploy -c {docker-compose file name} {docker compose app name}
-```
-
-Docker stack is a command used to deploy a docker-compose file in a swarm environment. 
-
-### Check running services
+### 
 
 ```
 docker service ls 
