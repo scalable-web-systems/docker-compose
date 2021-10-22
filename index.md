@@ -1,6 +1,6 @@
-# Docker Compose Tutorial 
+# Docker Swarm Tutorial 
 
-<img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2021/06/cover-docker-compose.png?resize=1110%2C522&ssl=1">
+<img src="https://miro.medium.com/max/2694/1*dybB9cpWGPfRB5y_E6Upxw.jpeg">
 
 ## Introduction 
 
