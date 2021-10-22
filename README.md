@@ -6,15 +6,15 @@
 
 This tutorial is about docker compose as the name suggests. The scope of this tutorial is talk about the motivation behind docker compose, how it works in brief and provide a quick guide to jump start on your local machine to see how it works.
 
-First, one needs to really look at the name "compose". In the world of container orchestration, compose, like a composer in music is all about composing, creating and architecting your containers. With the need of multiple containers, docker compose becomes a critical tool as well as powerful one while being simple to use. 
+First, one needs to really look at the name "compose". In the world of container orchestration, compose, just like a composer in music is all about composing, creating and architecting your containers. With the need of multiple containers, docker compose becomes a critical tool as well as powerful one while being simple to use. 
 
 ### Notes 
 
 {} - indicates a placeholder variable for a command
 
-## About Container Orchestration 
+## About Container Orchestration
 
-In a world of containers, managing them can often prove to be difficult in the context of scalability, distributed environments and having a lot of infrastructure. Docker swarm allows just for that. It allows for containers to run across several computing devices often virtual machines in the cloud. It is similar to kubernetes in the sense of its goal to orchestrate and manage containers. It often is far easier to setup and get started than kubernetes. Docker swarm has many goals, some of them include:
+Managing containers can often prove to be difficult in the context of scalability, distributed environments and having a lot of infrastructure. Docker compose provides the first building block of managing multiple containers.
 
 - An easy way to scale applications across computing resources 
 - Offerring fault tolerance & reliablity 
