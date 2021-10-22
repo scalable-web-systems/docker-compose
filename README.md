@@ -105,15 +105,15 @@ As you can see both the containers have logs after we run the command.
 
 To specify a specific yaml file, run:
 ```
-docker compose -f {file name with path} (Another compose file, this is optional)
+docker compose -f {file name with path} {Another compose file, this is optional}
 ```
 
 With -f flag, you can spcificy multiple compose files and it will package it into running containers all together. 
 
-### View information about the nodes in the swarm 
+### View running containers
 
 ```
-docker node ls
+docker ps
 ```
 
 Sample Output:
@@ -216,10 +216,10 @@ docker swarm leave --force
 docker compose up 
 
 #Check the current state of the swarm with container information
-docker compose -f {file name with path} (Another compose file, this is optional)
+docker compose -f {file name with path} {Another compose file, this is optional}
 
-#View information of nodes in the swarm 
-docker node ls 
+#View running containers
+docker ps
 
 #Create a service with the CLI
 docker service create --replicas {number of replicas} --name {service name} {image name} 
