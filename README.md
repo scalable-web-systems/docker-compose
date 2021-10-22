@@ -56,7 +56,7 @@ services:
 
 ### Version 
 
-The version of the docker compose file. Like any software and software system, compose files also have versions of updates docker made 
+The version of the docker compose file. Like any software and software system, compose files also have versions that correspond to updates made to file design, features and the docker engine. In most cases using the latest version works best. 
 
 ### Services
 
