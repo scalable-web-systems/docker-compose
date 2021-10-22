@@ -60,16 +60,27 @@ The version of the docker compose file. Like any software and software system, c
 
 ### Services
 
-Under the services 
+Under the services section are the services i.e. containers defined throuh YAML format. In the example "db" and "web" are the services. The name of the service is upto the developer, but having consistent and concise names help in development as best practice. 
 
 ### Images/Build 
 
+For each service, there needs to be a way to build the container through an image. Through the image argument, a predefined image can be chosen for example a database like postgres or a web server like nginx. The other way to do it is to define a dockerfile and put the path in the build argument.
+
 ### Environment Variables 
+
+Environment variables can be defined through the environment argument and then bullet points under it to specific each variable. Docker compose also supports pointing to a file to load many environment variables. 
 
 ### Volumes
 
+While containers are designed to be stateless, some need to store some state like datbases. With Docker compose volumes, we can store state. With the volumes aregument we can assign a directory on the host where the state management data will be stored. 
+
 ### Ports 
 
+The ports argument is used to expose the container to the host so it can be accessed. 
+
+### Depends on/links
+
+Depends on as the name suggests tells docker compose that a service depends on the availability of another. In the example, the web service depends on the database. This tells docker compose to create a network bridge between the two containers to interface. In the web application, one can simply refer to "db" to refer to teh database and it will simply work due to the network bridge. Depends on can also be written as "links" which is the same thing but different docker compose version. 
 
 ## Tutorial - Running Docker Compose Locally 
 
