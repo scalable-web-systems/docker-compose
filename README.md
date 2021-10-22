@@ -84,16 +84,31 @@ Depends on as the name suggests tells docker compose that a service depends on t
 
 ## Tutorial - Running Docker Compose Locally 
 
-### Initializing docker swarm 
+### Initializing docker compose
+
+First create a docker compose yaml file. If you are finding hard to create one, use the sample in this tutorial. Here are a few commands to get started:
 
 ```
-docker swarm init
+git clone https://github.com/abhinavtripathy/docker-compose.git
+cd docker-compose
+```
+
+To start the containers, run:
+```
+docker compose up 
 ```
 
 Sample Output:
 ![](img/output_1.png)
 
-This command initializes the swarm environment and makes the current device as a manager node. 
+As you can see both the containers have logs after we run the command. 
+
+To specify a specific yaml file, run:
+```
+docker compose -f {file name with path} (Another compose file, this is optional)
+```
+
+With -f flag, you can spcificy multiple compose files and it will package it into running containers all together. 
 
 ### View information about the nodes in the swarm 
 
@@ -201,7 +216,7 @@ docker swarm leave --force
 docker compose up 
 
 #Check the current state of the swarm with container information
-docker info 
+docker compose -f {file name with path} (Another compose file, this is optional)
 
 #View information of nodes in the swarm 
 docker node ls 
