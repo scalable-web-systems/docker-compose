@@ -178,5 +178,5 @@ docker exec -it {container name/id} {variable name=value}
 
 ## See something to improve on this tutorial?
 
-If you see a bug, or gramatical errors or something to add, please do submit a [pull request](https://github.com/abhinavtripathy/docker-compose/pulls)!
+If you see a bug, or gramatical errors or something to add, please do submit a [pull request](https://github.com/scalable-web-systems/docker-compose/pulls)!
 
